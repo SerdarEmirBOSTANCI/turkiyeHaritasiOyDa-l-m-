@@ -1,0 +1,120 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .header {
+            background-color: #022032;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+            .navbar a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 20px;
+                text-decoration: none;
+                transition: background-color 0.3s, transform 0.3s;
+                margin: 0 5px;
+                border: 1px solid white; /* İnce beyaz çerçeve ekliyoruz */
+                border-radius: 4px; /* Köşeleri hafif yuvarlıyoruz */
+            }
+
+                .navbar a:hover {
+                    background-color: #555;
+                    transform: scale(1.1);
+                }
+
+        /* Dropdown container */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            /* Links inside the dropdown */
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                transition: background-color 0.3s, transform 0.3s;
+                border: 1px solid #ddd; /* Dropdown linklerine ince gri çerçeve ekliyoruz */
+                border-radius: 4px; /* Köşeleri hafif yuvarlıyoruz */
+            }
+
+                /* Change color of dropdown links on hover */
+                .dropdown-content a:hover {
+                    background-color: #f1f1f1;
+                    transform: scale(1.1);
+                }
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .hr {
+            border: none;
+            height: 4px;
+            background-color: indianred;  
+            margin:0;
+        }
+
+    </style>
+    <meta name="viewport" content="width=device-width" />
+    <title>Seçimler</title>
+</head>
+<body>
+    <div class="navbar" style="background-color: #022032; color: white;">
+        <a href="/ikibinondortsecim/Index/">Seçim 2014</a>
+        <a href="/Secimikibinonyedi/Index/">Referandum 2017 </a>
+        <a href="/ikibinonsekizsecim/Index/">Seçim 2018</a>
+        <a href="/ikibinyirmiucsecimbir/Index/">Seçim 2023 1.Tur</a>
+        <a href="/Ikibinyirmiucsecimiki/Index/">Seçim 2023 2.Tur</a>
+        <a href="/ikibinyirmidortsecim/Index/">2024 Yerel Seçim</a>
+        <div class="dropdown">
+            <a href="#">Makine Tahminleri</a>
+            <div class="dropdown-content">
+                <a href="/MakineOgrenim/SecimTahmin2024/">2024 Tahminleri</a>
+                <a href="/MakineOgrenim/GelecekSecimTahmin/">Gelecek Seçim Tahmini</a>
+            </div>
+        </div>
+    </div>
+    <hr class="hr"/>
+
+    @RenderBody()
+
+</body>
+</html>

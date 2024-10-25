@@ -1,0 +1,292 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  width: 100%;
+  background-color: #e9e9e9;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.section-header {
+  background-color: #022032;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+
+.section-header h2 {
+  margin: 0;
+}
+
+.section-content {
+  background-color: white;
+  padding: 20px;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-btn {
+  background-color: #022032;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #022032;
+  /* Dropdown menü arka plan rengi */
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #033649;
+  /* Hover rengi */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropdown-btn {
+  background-color: #033649;
+  /* Hover rengi */
+}
+
+#citySearch {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #022032;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.containersonrakiknnakp {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#loadingsonrakiknnakp {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.hiddensonrakiknnakp {
+  display: none;
+}
+
+#resultsonrakiknnakp {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.containersonrakiknnchp {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#loadingsonrakiknnchp {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.hiddensonrakiknnchp {
+  display: none;
+}
+
+#resultsonrakiknnchp {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.containersonrakiknndem {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#loadingsonrakiknndem {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.hiddensonrakiknndem {
+  display: none;
+}
+
+#resultsonrakiknndem {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.containersonrakigbrakp {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#loadingsonrakigbrakp {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.hiddensonrakigbrakp {
+  display: none;
+}
+
+#resultsonrakigbrakp {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.containersonrakigbrchp {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#loadingsonrakigbrchp {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.hiddensonrakigbrchp {
+  display: none;
+}
+
+#resultsonrakigbrchp {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.containersonrakigbrdem {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#loadingsonrakigbrdem {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.hiddensonrakigbrdem {
+  display: none;
+}
+
+#resultsonrakigbrdem {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.containersonrakignnakp {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#loadingsonrakignnakp {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.hiddensonrakignnakp {
+  display: none;
+}
+
+#resultsonrakignnakp {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.containersonrakignnchp {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#loadingsonrakignnchp {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.hiddensonrakignnchp {
+  display: none;
+}
+
+#resultsonrakignnchp {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.containersonrakignndem {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#loadingsonrakignndem {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.hiddensonrakignndem {
+  display: none;
+}
+
+#resultsonrakignndem {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}

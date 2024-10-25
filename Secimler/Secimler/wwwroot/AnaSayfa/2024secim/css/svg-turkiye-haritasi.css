@@ -1,0 +1,144 @@
+.svg-turkiye-haritasi {
+    max-width: 1140px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.svg-turkiye-haritasi svg {
+    width: 100%;
+    height: auto;
+}
+
+.il-isimleri {
+    position: absolute;
+    z-index: 2;
+}
+
+.il-isimleri div {
+    font-family: "Open Sans";
+    display: inline-block;
+    background: #1094f6;
+    color: black;
+    padding: 8px 16px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+#bingol,
+#bitlis,
+#corum,
+#elazig,
+#erzurum,
+#gaziantep,
+#hatay,
+#isparta,
+#kayseri,
+#kocaeli,
+#konya,
+#malatya,
+#kahramanmaras,
+#nigde,
+#ordu,
+#rize,
+#sakarya,
+#samsun,
+#trabzon,
+#aksaray,
+#bayburt,
+#sirnak,
+#karabuk,
+#duzce path {
+    cursor: pointer;
+    fill: black;
+}
+
+#adana,
+#adiyaman,
+#afyonkarahisar,
+#amasya,
+#ankara,
+#artvin,
+#aydin,
+#balikesir,
+#bilecik,
+#bolu,
+#burdur,
+#bursa,
+#canakkale,
+#denizli,
+#edirne,
+#kilis,
+#yalova,
+#eskisehir,
+#giresun,
+#mersin,
+#istanbul-asya,
+#istanbul-avrupa,
+#izmir,
+#kastamonu,
+#kirsehir,
+#kutahya,
+#manisa,
+#mugla,
+#sinop,
+#tekirdag,
+#usak,
+#zonguldak,
+#antalya,
+#kirikkale,
+#bartin,
+#ardahan path {
+    cursor: pointer;
+    fill: black;
+}
+
+#cankiri,
+#erzincan,
+#gumushane,
+#kars,
+#kirklareli,
+#tokat,
+#karaman,
+#osmaniye path {
+    cursor: pointer;
+    fill: black;
+}
+
+#agri,
+#diyarbakir,
+#hakkari,
+#mardin,
+#mus,
+#van,
+#tunceli,
+#siirt,
+#batman,
+#igdir path {
+    cursor: pointer;
+    fill: black;
+}
+
+#sanliurfa,
+#yozgat path {
+    cursor: pointer;
+    fill: black;
+}
+
+#nevsehir path {
+    cursor: pointer;
+    fill: black;
+}
+
+#sivas path {
+    cursor: pointer;
+    fill: black;
+}
+
+#svg-turkiye-haritasi path:hover {
+    fill: #1094f6;
+}
+
+#guney-kibris {
+    pointer-events: none;
+}

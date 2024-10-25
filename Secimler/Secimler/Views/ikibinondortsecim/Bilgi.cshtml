@@ -1,0 +1,193 @@
+﻿@model EntityLayer.Concrete.ikibinondortsecim
+
+@{
+    Layout = "~/Views/Shared/_NavbarLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D3.js ile Referandum Oy Dağılımı</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="~/AnaSayfa/Baskanlik2014/css/genel.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/AnaSayfa/Baskanlik2014/style.css">
+</head>
+
+<body>
+    <header style="background-color: #022032; color: white; padding: 20px; text-align: center;">
+        <h1>2014 Başkanlık Seçimleri</h1>
+    </header>
+    <div class="content-wrapper">
+        <div class="section">
+            <div class="section-header" style="background-color: #022032; color: white;">
+                <h2>Oy Yüzde Grafikleri</h2>
+            </div>
+            <div class="section-content" style="background-color: white; padding: 20px;">
+
+                <div style=" text-align: center;" id="grafik"></div>
+                <div style="display: flex; flex-direction: row; ">
+                    <p style="margin-left: 22%;"><b>Recep Tayyip E.</b></p>
+                    <p style="margin-left: 12%;"><b>Ekmeleddin İ.</b></p>
+                    <p style="margin-left: 15%;"><b>Selahattin D.</b></p>
+
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-header" style="background-color: #022032; color: white;">
+                <h2><h2>@Model.SehirAd</h2>Seçim Sonuçları</h2>
+            </div>
+            <div class="section-content" style="background-color: white; padding: 20px; text-align: center;">
+                <table>
+                    <tr>
+                        <th>Parti</th>
+                        <th>Oy Oranı</th>
+                        <th>Parti</th>
+                        <th>Oy Oranı</th>
+                        <th>Parti</th>
+                        <th>Oy Oranı</th>
+                    </tr>
+                    <tr>
+                        <td>AK PARTİ</td>
+                        <td>@Model.RTEoyorani %</td>
+                        <td>CUMHURİYET HALK PARTİSİ</td>
+                        <td>@Model.EIoyorani %</td>
+                        <td>HALKLARIN DEMOKRATİK PARTİSİ</td>
+                        <td>@Model.SDoyorani %</td>
+                    </tr>
+                </table>
+
+            </div>
+            <div class="loader"></div>
+        </div>
+    </div>
+    <footer style="background-color: #022032; color: white; padding: 20px; text-align: center;">
+        <p>Tüm Hakları Saklıdır &copy; 2024</p>
+    </footer>
+
+    <script>
+        // Veri setini JSON formatında tanımlama (örnek veri)
+        var veri = [
+            {
+                parti: "Parti 1",
+                oy_orani: parseFloat("@Model.RTEoyorani".replace(',', '.')),
+            },
+            {
+                parti: "Parti 2",
+                oy_orani: parseFloat("@Model.EIoyorani".replace(',', '.')),
+            },
+            {
+                parti: "Parti 3",
+                oy_orani: parseFloat("@Model.SDoyorani".replace(',', '.')),
+            }
+        ];
+
+
+
+        // Her parti için belirlenen renkler
+        var renkler = {
+            "Parti 1": "orange",
+            "Parti 2": "red",
+            "Parti 3": "purple",
+        };
+
+        // SVG öğesi oluşturma
+        var genislik = 800,
+            yukseklik = 300;
+
+        var svg = d3
+            .select("#grafik")
+            .append("svg")
+            .attr("width", genislik)
+            .attr("height", yukseklik);
+
+        // Çubuk grafik oluşturma
+        var x = d3
+            .scaleBand()
+            .domain(
+                veri.map(function (d) {
+                    return d.parti;
+                })
+            )
+            .range([0, genislik])
+            .padding(0.1);
+
+        var y = d3.scaleLinear().domain([0, 100]).range([yukseklik, 0]);
+
+        svg
+            .selectAll(".bar")
+            .data(veri)
+            .enter()
+            .append("rect")
+            .attr("class", "bar")
+            .attr("x", function (d) {
+                return x(d.parti);
+            })
+            .attr("width", x.bandwidth())
+            .attr("y", y(0))
+            .attr("height", 0)
+            .attr("fill", function (d) { return renkler[d.parti]; }) // Her partiye özel belirlenen renkleri kullanın
+            .transition()
+            .duration(1500) // Animasyon süresi
+            .attr("y", function (d) {
+                return y(d.oy_orani);
+            })
+            .attr("height", function (d) {
+                return y(0) - y(d.oy_orani);
+            });
+
+        // Blokların altında oy oranlarının yazılması
+        svg
+            .selectAll("text")
+            .data(veri)
+            .enter()
+            .append("text")
+            .attr("x", function (d) {
+                return x(d.parti) + x.bandwidth() / 2;
+            })
+            .attr("y", function (d) {
+                return y(0) + 20;
+            }) // Blokların altında yer alacak şekilde 20 birim aşağı kaydırıyoruz
+            .attr("text-anchor", "middle")
+            .text(function (d) {
+                return d.oy_orani + "%";
+            });
+
+        // Eksenlerin oluşturulması
+        svg
+            .append("g")
+            .attr("transform", "translate(0," + y(0) + ")")
+            .call(d3.axisBottom(x))
+            .append("text")
+            .attr("x", genislik / 2)
+            .attr("y", 40)
+            .attr("fill", "#000")
+            .attr("text-anchor", "middle")
+            .text("Partiler");
+
+        svg
+            .append("g")
+            .call(d3.axisLeft(y))
+            .append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("y", 6)
+            .attr("dy", "-3em")
+            .attr("fill", "#000")
+            .attr("text-anchor", "end")
+            .text("Oy Oranı (%)");
+
+        // Grafik başlığının eklenmesi
+        svg
+            .append("text")
+            .attr("x", genislik / 2)
+            .attr("y", 20)
+            .attr("text-anchor", "middle")
+            .style("font-size", "16px")
+            .text("Parti Oy Dağılımı");
+    </script>
+</body>
+</html>
+
+

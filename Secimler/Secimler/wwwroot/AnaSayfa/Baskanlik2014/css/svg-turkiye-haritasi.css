@@ -1,0 +1,151 @@
+.svg-turkiye-haritasi {
+  margin: 0 auto;
+  text-align: left;
+  display: flex;
+  justify-content: center; /* Yatay hizalama */
+  align-items: center; /* Dikey hizalama */
+  height: 100vh;
+  border: 2px;
+}
+
+.svg-turkiye-haritasi svg {
+  width: 100%;
+  height: auto;
+}
+
+.il-isimleri {
+  position: absolute;
+  z-index: 2;
+}
+
+
+.il-isimleri div {
+  font-family: "Open Sans";
+  display: inline-block;
+  background: #333;
+  color: white;
+  padding: 8px 16px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+#adiyaman,
+#afyonkarahisar,
+#aksaray,
+#amasya,
+#ankara,
+#ardahan,
+#artvin,
+#bartin,
+#bayburt,
+#bilecik,
+#bingol,
+#bitlis,
+#bolu,
+#burdur,
+#bursa,
+#cankiri,
+#corum,
+#duzce,
+#elazig,
+#erzincan,
+#erzurum,
+#gaziantep,
+#giresun,
+#gumushane,
+#isparta,
+#istanbul-asya,
+#istanbul-avrupa,
+#kahramanmaras,
+#karabuk,
+#karaman,
+#kars,
+#kastamonu,
+#kayseri,
+#kirikkale,
+#kirsehir,
+#kilis,
+#kocaeli,
+#konya,
+#kutahya,
+#malatya,
+#nevsehir,
+#nigde,
+#ordu,
+#rize,
+#sakarya,
+#samsun,
+#sinop,
+#sivas,
+#sanliurfa,
+#tokat,
+#trabzon,
+#usak,
+#yalova,
+#yozgat,
+#zonguldak path {
+  cursor: pointer;
+  fill: black;
+}
+
+#adana,
+#antalya,
+#aydin,
+#balikesir,
+#canakkale,
+#denizli,
+#edirne,
+#eskisehir,
+#hatay,
+#izmir,
+#kirklareli,
+#manisa,
+#mersin,
+#mugla,
+#osmaniye,
+#tekirdag path {
+  cursor: pointer;
+  fill: black;
+}
+
+#agri,
+#batman,
+#diyarbakir,
+#hakkari,
+#igdir,
+#mardin,
+#mus,
+#siirt,
+#sirnak,
+#tunceli,
+#van path {
+  cursor: pointer;
+  fill: black;
+}
+
+/*#svg-turkiye-haritasi path {
+  cursor: pointer;
+  fill: #222;
+}*/
+#svg-turkiye-haritasi {
+  filter: blur(0); /* Normalde blur olmasın */
+}
+
+#svg-turkiye-haritasi path {
+  transition: fill 0.3s ease; /* Renk değişimi için geçiş efekti ekle */
+}
+
+#svg-turkiye-haritasi path:hover {
+  fill: #333; /* Path üzerine gelindiğinde renk değişimi */
+  border: "2px solid black";
+}
+
+
+#guney-kibris {
+  pointer-events: none;
+}
+
+
+
+

@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    background-color: #E9E9E9;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section-header {
+    background-color: #022032;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+
+.section-header h2 {
+    margin: 0;
+}
+
+.section-content {
+    background-color: white;
+    padding: 20px;
+}
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-btn {
+    background-color: #022032;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #022032; /* Dropdown menü arka plan rengi */
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #033649; /* Hover rengi */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropdown-btn {
+    background-color: #033649; /* Hover rengi */
+}
+#citySearch {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #022032;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* tablo kısmı */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+th, td {
+    border: 1px solid #333;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+th {
+    background-color: #f2f2f2;
+    border-radius: 10px;
+}

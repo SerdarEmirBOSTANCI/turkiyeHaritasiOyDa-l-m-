@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gelecek Seçim Tahmin Sonuçları</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </head>
+
+  <body>
+    <header
+      style="
+        background-color: #022032;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      "
+    >
+      <h1>Gelecek Seçim Tahmin Sonuçları</h1>
+    </header>
+    <div class="content-wrapper">
+      <div class="section">
+        <div
+          class="section-header"
+          style="background-color: #022032; color: white"
+        >
+          <h2>KNN Algoritması Tahmin Sonuçları</h2>
+        </div>
+        <div
+          class="section-content"
+          style="background-color: white; padding: 20px"
+        >
+          <div style="display: flex; flex-direction: row;">
+          <div class="containersonrakiknnakp">
+            <h1>2028 AKP Oy Tahmini(KNN)</h1>
+            <button style="height: 30px; width: 100px; border-radius: 20px; box-shadow: black; background-color: #022032; color: white;" id="predict-btnsonrakiknnakp">Tahmin Yap</button>
+            <div id="loadingsonrakiknnakp" class="hiddensonrakiknnakp">
+              Tahmin yapılıyor...
+            </div>
+            <div id="resultsonrakiknnakp" class="hiddensonrakiknnakp"></div>
+          </div>
+          <div class="containersonrakiknnchp">
+            <h1>2028 CHP Oy Tahmini(KNN)</h1>
+            <button style="height: 30px; width: 100px; border-radius: 20px; box-shadow: black; background-color: #022032; color: white;"id="predict-btnsonrakiknnchp">Tahmin Yap</button>
+            <div id="loadingsonrakiknnchp" class="hiddensonrakiknnchp">
+              Tahmin yapılıyor...
+            </div>
+            <div id="resultsonrakiknnchp" class="hiddensonrakiknnchp"></div>
+          </div>
+          <div class="containersonrakiknndem">
+            <h1>2028 DEM Partisi Oy Tahmini(KNN)</h1>
+            <button style="height: 30px; width: 100px; border-radius: 20px; box-shadow: black; background-color: #022032; color: white;" id="predict-btnsonrakiknndem">Tahmin Yap</button>
+            <div id="loadingsonrakiknndem" class="hiddensonrakiknndem">
+              Tahmin yapılıyor...
+            </div>
+            <div id="resultsonrakiknndem" class="hiddensonrakiknndem"></div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div
+          class="section-header"
+          style="background-color: #022032; color: white"
+        >
+          <h2>GBR Algoritması Tahmin Sonuçları</h2>
+        </div>
+        <div
+          class="section-content"
+          style="background-color: white; padding: 20px"
+        >
+        <div style="display: flex; flex-direction: row;">
+          <div class="containersonrakigbrakp">
+            <h1>2028 AKP Oy Tahmini (GBR)</h1>
+            <button style="height: 30px; width: 100px; border-radius: 20px; box-shadow: black; background-color: #022032; color: white;" id="predict-btnsonrakigbrakp">Tahmin Yap</button>
+            <div id="loadingsonrakigbrakp" class="hiddensonrakigbrakp">
+              Tahmin yapılıyor...
+            </div>
+            <div id="resultsonrakigbrakp" class="hiddensonrakigbrakp"></div>
+          </div>
+          <div class="containersonrakigbrchp">
+            <h1>2028 CHP Oy Tahmini (GBR)</h1>
+            <button style="height: 30px; width: 100px; border-radius: 20px; box-shadow: black; background-color: #022032; color: white;" id="predict-btnsonrakigbrchp">Tahmin Yap</button>
+            <div id="loadingsonrakigbrchp" class="hiddensonrakigbrchp">
+              Tahmin yapılıyor...
+            </div>
+            <div id="resultsonrakigbrchp" class="hiddensonrakigbrchp"></div>
+          </div>
+          <div class="containersonrakigbrdem">
+            <h1>2028 DEM Partisi Oy Tahmini (GBR)</h1>
+            <button style="height: 30px; width: 100px; border-radius: 20px; box-shadow: black; background-color: #022032; color: white;" id="predict-btnsonrakigbrdem">Tahmin Yap</button>
+            <div id="loadingsonrakigbrdem" class="hiddensonrakigbrdem">
+              Tahmin yapılıyor...
+            </div>
+            <div id="resultsonrakigbrdem" class="hiddensonrakigbrdem"></div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div
+          class="section-header"
+          style="background-color: #022032; color: white"
+        >
+          <h2>GNN Algoritması Tahmin Sonuçları</h2>
+        </div>
+        <div
+          class="section-content"
+          style="background-color: white; padding: 20px"
+        >
+        <div style="display: flex; flex-direction: row;">
+          <div class="containersonrakignnakp">
+            <h1>AKP Sonraki Seçim Tahmini (GNN)</h1>
+            <button style="height: 30px; width: 100px; border-radius: 20px; box-shadow: black; background-color: #022032; color: white;" id="predict-btnsonrakignnakp">Tahmin Yap</button>
+            <div id="loadingsonrakignnakp" class="hiddensonrakignnakp">
+              Tahmin yapılıyor...
+            </div>
+            <div id="resultsonrakignnakp" class="hiddensonrakignnakp"></div>
+          </div>
+          <div class="containersonrakignnchp">
+            <h1>CHP Sonraki Seçim Oy Tahmini (GNN)</h1>
+            <button style="height: 30px; width: 100px; border-radius: 20px; box-shadow: black; background-color: #022032; color: white;" id="predict-btnsonrakignnchp">Tahmin Yap</button>
+            <div id="loadingsonrakignnchp" class="hiddensonrakignnchp">
+              Tahmin yapılıyor...
+            </div>
+            <div id="resultsonrakignnchp" class="hiddensonrakignnchp"></div>
+          </div>
+          <div class="containersonrakignndem">
+            <h1>DEM Bir Sonraki Seçim Oy Tahmini</h1>
+            <button style="height: 30px; width: 100px; border-radius: 20px; box-shadow: black; background-color: #022032; color: white;" id="predict-btnsonrakignndem">Tahmin Yap</button>
+            <div id="loadingsonrakignndem" class="hiddensonrakignndem">
+              Tahmin yapılıyor...
+            </div>
+            <div id="resultsonrakignndem" class="hiddensonrakignndem"></div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="loader"></div>
+    </div>
+    <footer
+      style="
+        background-color: #022032;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      "
+    >
+      <p>Tüm Hakları Saklıdır &copy; 2024</p>
+    </footer>
+    <script src="js/svg-turkiye-haritasi.js"></script>
+    <script>
+      /*harita*/
+      svgturkiyeharitasi();
+
+      function refreshPage() {
+        location.reload(); // Sayfayı yenile
+      }
+      window.addEventListener("load", () => {
+        const loader = document.querySelector(".loader");
+
+        loader.classList.add("loader-hidden");
+
+        loader.addEventListener("transitionend", () => {
+          document.body.removeChild("loader;,");
+        });
+      });
+      //harita
+
+      function grafikCiz(oySecimi, oyOrani, divID, renk) {
+        var veri = [
+          {
+            oy_turu: oySecimi,
+            oy_orani: oyOrani,
+          },
+        ];
+
+        var genislik = 300, //...
+          yukseklik = 90;
+
+        var svg = d3
+          .select("#" + divID)
+          .append("svg")
+          .attr("width", genislik)
+          .attr("height", yukseklik);
+
+        var y = d3
+          .scaleBand()
+          .domain(
+            veri.map(function (d) {
+              return d.oy_turu;
+            })
+          )
+          .range([20, yukseklik - 20])
+          .padding(0.1);
+
+        var x = d3.scaleLinear().domain([0, 100]).range([0, genislik]);
+
+        // Çerçeve oluşturma
+        svg
+          .append("rect")
+          .attr("x", x(0)) // Çerçevenin x konumu
+          .attr("y", y(oySecimi)) // Çerçevenin y konumu
+          .attr("width", x(100)) // Genişlik %100
+          .attr("height", y.bandwidth()) // Yükseklik
+          .attr("stroke", "black") // Kenarlık rengi
+          .attr("stroke-width", 1) // Kenarlık kalınlığı
+          .attr("fill", "none"); // Dolgu yok
+
+        svg
+          .selectAll(".bar")
+          .data(veri)
+          .enter()
+          .append("rect")
+          .attr("class", "bar")
+          .attr("y", function (d) {
+            return y(d.oy_turu);
+          })
+          .attr("height", y.bandwidth())
+          .attr("x", 0)
+          .attr("width", 0)
+          .attr("fill", renk) // Parametre olarak gelen renk kullanılıyor
+          .transition()
+          .duration(1500)
+          .attr("width", function (d) {
+            return x(d.oy_orani);
+          });
+
+        svg
+          .selectAll("text")
+          .data(veri)
+          .enter()
+          .append("text")
+          .attr("x", function (d) {
+            return x(d.oy_orani) + 5;
+          })
+          .attr("y", function (d) {
+            return y(d.oy_turu) + y.bandwidth() / 2;
+          })
+          .attr("text-anchor", "start")
+          .text(function (d) {
+            return d.oy_orani + "%";
+          });
+
+        svg.append("g").call(d3.axisLeft(y));
+
+        svg
+          .append("g")
+          .attr("transform", "translate(0," + yukseklik + ")")
+          .call(d3.axisBottom(x))
+          .append("text")
+          .attr("x", genislik / 2)
+          .attr("y", 40)
+          .attr("fill", "#000")
+          .attr("text-anchor", "middle")
+          .text("Oy Oranı (%)");
+
+        svg
+          .append("text")
+          .attr("x", genislik / 2)
+          .attr("y", 15)
+          .attr("text-anchor", "middle")
+          .style("font-size", "18px")
+          .text(oySecimi);
+      }
+
+      grafikCiz("Aday1", 0, "grafik1", "#ff7200");
+      grafikCiz("Aday2", 0, "grafik2", "red");
+      grafikCiz("Aday3", 0, "grafik3", "blue");
+    </script>
+    <script src="scriptsonrakiknnakp.js"></script>
+    <script src="scriptsonrakiknnchp.js"></script>
+    <script src="scriptsonrakiknndem.js"></script>
+    <script src="scriptsonrakigbrakp.js"></script>
+    <script src="scriptsonrakigbrchp.js"></script>
+    <script src="scriptsonrakigbrdem.js"></script>
+    <script src="scriptsonrakignnakp.js"></script>
+    <script src="scriptsonrakignnchp.js"></script>
+    <script src="scriptsonrakignndem.js"></script>
+  </body>
+</html>

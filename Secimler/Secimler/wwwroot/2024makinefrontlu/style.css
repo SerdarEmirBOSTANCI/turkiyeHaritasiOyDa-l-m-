@@ -1,0 +1,292 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  width: 100%;
+  background-color: #e9e9e9;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.section-header {
+  background-color: #022032;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+
+.section-header h2 {
+  margin: 0;
+}
+
+.section-content {
+  background-color: white;
+  padding: 20px;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-btn {
+  background-color: #022032;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #022032;
+  /* Dropdown menü arka plan rengi */
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #033649;
+  /* Hover rengi */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropdown-btn {
+  background-color: #033649;
+  /* Hover rengi */
+}
+
+#citySearch {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.containerakp {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#loadingakp {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+#loadingchp {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.hiddenakp {
+  display: none;
+}
+
+.hiddenchp {
+  display: none;
+}
+
+#resultakp {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+#resultchp {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #022032;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.containerchp {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.containerdem {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#loadingdem {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.hiddendem {
+  display: none;
+}
+
+#resultdem {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.containerknnakp {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#loadingknnakp {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.hiddenknnakp {
+  display: none;
+}
+
+#resultknnakp {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.containerknnchp {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#loadingknnchp {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.hiddenknnchp {
+  display: none;
+}
+
+#resultknnchp {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.containerknndem {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#loadingknndem {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.hiddenknndem {
+  display: none;
+}
+
+#resultknndem {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.containergnnakp {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#loadinggnnakp {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.hiddengnnakp {
+  display: none;
+}
+
+#resultgnnakp {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.containergnnchp {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#loadinggnnchp {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.hiddengnnchp {
+  display: none;
+}
+
+#resultgnnchp {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.containergnndem {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#loadinggnndem {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.hiddengnndem {
+  display: none;
+}
+
+#resultgnndem {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
